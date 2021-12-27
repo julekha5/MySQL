@@ -17,4 +17,9 @@ INSERT INTO employee_payroll (name,salary,startDate) VALUES
  ('Nitesh', 31500, '2021-10-30');
  SELECT * FROM employee_payroll;
  SELECT salary FROM employee_payroll WHERE name = 'Julekha' ;    
- SELECT * FROM employee_payroll WHERE startDate BETWEEN '2021-01-11' AND DATE(NOW());
+SELECT * FROM employee_payroll WHERE startDate BETWEEN '2021-01-11' AND DATE(NOW());
+ALTER TABLE employee_payroll ADD gender varchar(1) NOT NULL AFTER name;
+UPDATE employee_payroll SET gender = 'F'
+WHERE name = 'Julekha' or name = 'Rohini' or name ='Divya' or name = 'Neeta'; 
+UPDATE employee_payroll SET gender = 'M' 
+WHERE name = 'Ashok' or name = 'Durgesh' or name = 'Shubham' or name = 'Nitesh';
